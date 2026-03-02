@@ -1,0 +1,20 @@
+Product,Category,Revenue,Units_Sold,Region,Month
+Widget A,Electronics,12500,150,North,January
+Widget B,Electronics,8700,95,South,January
+Widget C,Home,4200,210,East,January
+Widget D,Sports,15800,320,West,January
+Widget E,Electronics,22000,180,North,February
+Widget F,Home,3100,140,South,February
+Widget G,Sports,9800,270,East,February
+Widget H,Electronics,18500,210,West,February
+Widget A,Electronics,14200,165,North,March
+Widget B,Electronics,7900,88,South,March
+Widget C,Home,5500,240,East,March
+Widget D,Sports,16200,340,West,March
+Widget I,Fashion,11000,420,North,March
+Widget J,Fashion,8800,380,South,March
+Widget K,Home,6700,310,East,April
+Widget L,Sports,21000,450,West,April
+Widget M,Fashion,14500,520,North,April
+Widget N,Electronics,19800,200,South,April
+Widget O,Home,3900,175,East,April

@@ -1,0 +1,244 @@
+/* ── Testimonial Carousel ─────────────────────────── */
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: visible;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+/* Oversized index number */
+.bigNumber {
+    position: absolute;
+    left: -32px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(180px, 28vw, 380px);
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.025);
+    user-select: none;
+    pointer-events: none;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-family: var(--font-display);
+}
+
+.bigNumberSpan {
+    display: block;
+}
+
+/* Main layout */
+.mainRow {
+    position: relative;
+    display: flex;
+}
+
+/* Left column — vertical label + progress */
+.leftCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 48px;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.verticalLabel {
+    font-size: 10px;
+    font-weight: 600;
+    font-family: var(--font-mono, monospace);
+    color: rgba(0, 0, 0, 0.35);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.progressTrack {
+    position: relative;
+    height: 96px;
+    width: 2px;
+    background: rgba(0, 0, 0, 0.06);
+    margin-top: 24px;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.progressFill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ff5100;
+    transform-origin: top;
+    border-radius: 1px;
+}
+
+/* Center — main content */
+.centerCol {
+    flex: 1;
+    padding-left: 48px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+
+/* Company badge */
+.badgeWrap {
+    margin-bottom: 28px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: var(--font-mono, monospace);
+    color: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 100px;
+    padding: 4px 14px;
+}
+
+.badgeDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ff5100;
+}
+
+/* Quote */
+.quoteWrap {
+    position: relative;
+    margin-bottom: 40px;
+    min-height: 120px;
+}
+
+.quote {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 300;
+    color: var(--text, #111);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-family: var(--font-display);
+    margin: 0;
+}
+
+.quoteWord {
+    display: inline-block;
+    margin-right: 0.3em;
+}
+
+/* Author row */
+.authorRow {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.authorInfo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.authorLine {
+    width: 32px;
+    height: 1px;
+    background: var(--text, #111);
+    transform-origin: left;
+}
+
+.authorName {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text, #111);
+    margin: 0;
+}
+
+.authorRole {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.45);
+    margin: 0;
+}
+
+/* Navigation buttons */
+.navBtns {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navBtn {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text, #111);
+    transition: all 0.2s;
+}
+
+.navBtn:hover {
+    background: rgba(255, 81, 0, 0.08);
+    border-color: rgba(255, 81, 0, 0.2);
+    color: #ff5100;
+}
+
+/* Bottom ticker */
+.ticker {
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    right: -40px;
+    overflow: hidden;
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+.tickerInner {
+    display: flex;
+    white-space: nowrap;
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text, #111);
+}
+
+.tickerChunk {
+    margin: 0 24px;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 640px) {
+    .leftCol {
+        display: none;
+    }
+
+    .centerCol {
+        padding-left: 0;
+    }
+
+    .bigNumber {
+        left: -16px;
+        font-size: 140px;
+    }
+
+    .authorRow {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}

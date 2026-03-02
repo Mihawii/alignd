@@ -1,0 +1,280 @@
+.uploadPage {
+    min-height: 100dvh;
+    padding: 72px 24px 48px;
+    background: var(--bg);
+}
+
+.container {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 28px;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.heading h1 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.heading p {
+    font-size: 14px;
+    color: var(--text-tertiary);
+}
+
+/* ── Drop Zone ────────────────────────────────────── */
+.dropZone {
+    position: relative;
+    border: 1px dashed rgba(0, 0, 0, 0.15);
+    border-radius: var(--radius-lg);
+    background: var(--bg-raised);
+    padding: 48px 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    margin-bottom: 20px;
+}
+
+.dropZone:hover,
+.dropZoneActive {
+    border-color: rgba(0, 0, 0, 0.25);
+    background: var(--bg-elevated);
+}
+
+.dropIcon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-tertiary);
+}
+
+.dropTitle {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.dropSubtitle {
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+.fileInput {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* ── Error ────────────────────────────────────────── */
+.error {
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    background: rgba(232, 112, 112, 0.06);
+    border: 1px solid rgba(232, 112, 112, 0.12);
+    color: var(--negative);
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+/* ── Data Health Cards ────────────────────────────── */
+.dataHealth {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.healthCard {
+    padding: 16px;
+    border-radius: var(--radius-md);
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    text-align: center;
+}
+
+.healthCardValue {
+    font-family: var(--font-mono);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+    margin-bottom: 3px;
+}
+
+.healthCardLabel {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* ── Column Types ─────────────────────────────────── */
+.columnTypes {
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    margin-bottom: 16px;
+    animation: fadeInUp 0.3s ease-out 0.05s both;
+}
+
+.columnTypesTitle {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+}
+
+.columnList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.columnBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    color: var(--text-secondary);
+}
+
+.columnBadgeNumeric {
+    color: var(--text);
+}
+
+.columnBadgeCategorical {
+    color: var(--text-secondary);
+}
+
+.columnTypeDot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--text-tertiary);
+}
+
+.columnTypeDotNumeric {
+    background: var(--text);
+}
+
+.columnTypeDotCategorical {
+    background: var(--text-tertiary);
+}
+
+/* ── Preview Table ────────────────────────────────── */
+.preview {
+    margin-bottom: 16px;
+    animation: fadeInUp 0.3s ease-out 0.1s both;
+}
+
+.previewTitle {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+}
+
+.tableWrapper {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    overflow: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: 12px;
+}
+
+.table thead {
+    background: var(--bg-raised);
+    border-bottom: 1px solid var(--border);
+}
+
+.table th {
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.table td {
+    padding: 7px 12px;
+    color: var(--text-tertiary);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* ── Analyze Button ───────────────────────────────── */
+.analyzeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+    background: var(--text);
+    color: var(--bg);
+    font-size: 14px;
+    font-weight: 600;
+    transition: opacity 0.15s;
+    animation: fadeInUp 0.3s ease-out 0.15s both;
+}
+
+.analyzeBtn:hover:not(:disabled) {
+    opacity: 0.85;
+}
+
+.analyzeBtn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(0, 0, 0, 0.15);
+    border-top-color: var(--bg);
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 640px) {
+    .dataHealth {
+        grid-template-columns: 1fr;
+    }
+}
