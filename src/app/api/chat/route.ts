@@ -5,8 +5,8 @@ import { isWhatIfQuestion, parseScenario, simulateScenario, WhatIfResponse } fro
 
 /* ── AI Provider Config ───────────────────────────── */
 const AI_API_KEY = process.env.AI_API_KEY || "";
-const AI_BASE_URL = process.env.AI_API_BASE_URL || "https://generativelanguage.googleapis.com/v1beta/openai";
-const AI_MODEL = process.env.AI_MODEL || "gemini-2.0-flash";
+const AI_BASE_URL = process.env.AI_API_BASE_URL || "https://api.deepseek.com/v1";
+const AI_MODEL = process.env.AI_MODEL || "deepseek-chat";
 
 /* ── Response Types ───────────────────────────────── */
 interface KPI { label: string; value: string; sublabel?: string }
